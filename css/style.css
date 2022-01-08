@@ -20,9 +20,9 @@
     --white-color: white;
     --black-color: black;
 
-    /*========== FONT & TYPORGRAPHY ==========*/
+    /*========== FONT & TYPOGRAPHY ==========*/
     --body-font: 'Poppins', sans-serif;
-    --second-font: 'Playfair Display', serif;
+
     --biggest-font-size: 4rem;
     --bigger-font-size: 3rem;
     --big-font-size: 2rem;
@@ -93,12 +93,12 @@ body {
 
 ::-moz-selection {
     background: var(--first-color);
-    color: white;
+    color: var(--white-color);
 }
 
 ::selection {
     background: var(--first-color);
-    color: white;
+    color: var(--white-color);
 }
 
 h1, h2, h3, ul, p {
@@ -154,7 +154,6 @@ article {
 }
 
 .article__title {
-    position: relative;
     font-weight: var(--font-600);
     font-size: var(--h2-font-size);
 }
@@ -162,7 +161,7 @@ article {
 .article__subtitle {
     font-weight: var(--font-500);
     font-size: var(--h3-font-size);
-    color: var(--home-title-color);
+    color: var(--text-color);
 }
 
 .article__url a,
@@ -516,7 +515,6 @@ article {
     color: var(--text-color);
 }
 
-
 /*========== ICONS ==========*/
 .icon {
     font-style: normal;
@@ -591,13 +589,21 @@ article {
     }
 
     .container {
-        margin-right: var(--mb-0-5);
+        margin-left: var(--mb-0-75);
+        margin-right: var(--mb-0-75);
     }
 }
 
 @media print, screen and (min-width: 786px) {
     .main {
         margin: auto;
+    }
+
+    .article__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2rem;
     }
 
     .container {

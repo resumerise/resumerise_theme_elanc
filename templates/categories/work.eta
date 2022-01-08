@@ -17,19 +17,21 @@
                         value: work.position,
                         classes: 'article__subtitle'
                     }) %>
-                    <%~ include('key-url-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
-                        value: work.website,
-                        classes: 'article__url'
-                    }) %>
-                    <%~ include('date-range', {
-                        formatDate: it.formatDate,
-                        startDate: work.startDate,
-                        endDate: work.endDate,
-                        present: work.present,
-                        settings: it.resume.settings,
-                        classes: 'article__date'
-                    }) %>
+                    <div class="article__wrapper">
+                        <%~ include('key-url-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
+                            value: work.website,
+                            classes: 'article__url'
+                        }) %>
+                        <%~ include('date-range', {
+                            formatDate: it.formatDate,
+                            startDate: work.startDate,
+                            endDate: work.endDate,
+                            present: work.present,
+                            settings: it.resume.settings,
+                            classes: 'article__date'
+                        }) %>
+                    </div>
                 </div>
                 <div class="article-content s-grid">
                     <%~ include('key-value-item', {
