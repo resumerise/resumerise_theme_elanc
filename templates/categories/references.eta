@@ -1,7 +1,8 @@
 <section class="references section" id="references">
 	<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
-		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></header>
+		<header><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></header>
 	<% } %>
+	
 	<div class="article-container grid">
 		<% it.resume?.references.forEach(function(reference) { %>
 			<article>
