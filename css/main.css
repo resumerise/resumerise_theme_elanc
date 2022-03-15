@@ -32,6 +32,9 @@
     /* Skill progress backgroind color */
     --skill-rating-progress-background-color: hsl(var(--hue-color), 100%, 60%);
 
+    /* Skill rating bar height */
+    --skill-rating-height: .5em;
+
     /* Width of article logo */
     --article-logo-img-width: 4em;
 
@@ -285,8 +288,7 @@ article {
 }
 
 /* AWARDS */
-:is(.awards, .publications) article,
-.references .article-container {
+:is(.awards, .publications) article {
     gap: 1rem !important;
 }
 
@@ -299,11 +301,11 @@ article {
 /* SKILLS */
 .s-c {
     margin-top: 1rem;
-    gap: .75rem;
+    gap: 1rem !important;
 }
 
 .skills__progress {
-    gap: .25rem;
+    gap: .25rem !important;
 }
 
 .article__skills-title {
@@ -338,8 +340,6 @@ article {
     /* max-width: 968px; */
     max-width: 1024px;
     width: calc(100% - 3rem);
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
 }
 
 .grid {
@@ -385,6 +385,15 @@ article {
     justify-content: space-between;
 }
 
+:is(.languages, .references) .article-container {
+    gap: 1.75rem;
+}
+
+.references .article__description {
+    margin-top: 0;
+}
+
+/* 
 .area {
     width: 100%;
     height: 100%;
@@ -541,7 +550,7 @@ article {
         -ms-transform: translateY(-5000px) rotate(720deg);
         -o-transform: translateY(-5000px) rotate(720deg);
     }
-}
+} */
 
 /*========== HOME SECTION ==========*/
 .basics header {
@@ -776,20 +785,37 @@ article {
     }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 350px) {
+    .main-wrapper .container {
+        margin-left: var(--mb-0-5) !important;
+        margin-right: var(--mb-0-75) !important;
+    }
+}
+
+@media screen and (max-width: 486px) {
     .main {
         padding: 0;
     }
 
     .container {
-        /* margin-left: var(--mb-0-75); */
+        margin-left: var(--mb-1-5);
         margin-right: var(--mb-0-75);
+    }
+}
+
+
+
+@media print, screen and (min-width: 486px) {
+    .container {
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
     }
 }
 
 @media print, screen and (min-width: 786px) {
     .main {
         margin: auto;
+        max-width: 1024px;
     }
 
     .article__wrapper {
@@ -806,7 +832,8 @@ article {
 
     .basics,
     .main-wrapper {
-        grid-template-columns: .5fr 1fr;
+        grid-template-columns: .55fr 1fr;
+        gap: 1rem;
     }
 
     .profile__img {

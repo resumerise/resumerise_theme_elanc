@@ -18,21 +18,6 @@
 		</style>
 	</head>
 	<body>
-		<div class="area">
-			<ul class="circles">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-
 		<main class="main">
 			<% if (it.type === 'PRINT') { %>
 				<!-- cover Page -->
@@ -65,7 +50,7 @@
 			}) %>
 			
 			<div class="main-wrapper grid">
-				<div class="left container">
+				<div class="left">
 					<!-- SKILLS -->
 					<%~ include("skills", {
 						resume: it.resume
@@ -100,14 +85,9 @@
 					<%~ include("profile", {
 						resume: it.resume
 					}) %>
-					
-					<!-- EDUCATION -->
-					<%~ include("education", {
-						resume: it.resume
-					}) %>
 				</div>
 
-				<div class="right container">
+				<div class="right">
 					<!-- WORK -->
 					<%~ include("work", {
 						resume: it.resume
@@ -125,6 +105,11 @@
 					
 					<!-- AWARDS -->
 					<%~ include("awards", {
+						resume: it.resume
+					}) %>
+					
+					<!-- EDUCATION -->
+					<%~ include("education", {
 						resume: it.resume
 					}) %>
 				</div>

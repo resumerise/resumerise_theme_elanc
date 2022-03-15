@@ -1,4 +1,4 @@
-<section class="profiles section" id="profiles">
+<section class="profiles container section" id="profiles">
     <% if(it.resume.settings?.labels?.categoryProperty?.profile?.categoryTitle) { %>
         <header class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></header>
     <% } %>

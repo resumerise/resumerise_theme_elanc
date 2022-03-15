@@ -1,4 +1,4 @@
-<section class="volunteer section" id="volunteer">
+<section class="volunteer container section" id="volunteer">
 	<% if(it.resume.settings?.labels?.categoryProperty?.volunteer?.categoryTitle) { %>
 		<header><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></header>
 	<% } %>
