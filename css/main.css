@@ -119,12 +119,12 @@ body {
 }
 
 ::-moz-selection {
-    background: var(--first-color-lighter);
+    background: hsl(var(--hue-color), 69%, 80%);
     color: var(--white-color);
 }
 
 ::selection {
-    background: var(--first-color-lighter);
+    background: hsl(var(--hue-color), 69%, 80%);
     color: var(--white-color);
 }
 
@@ -834,6 +834,10 @@ article {
     .main-wrapper {
         grid-template-columns: .55fr 1fr;
         gap: 1rem;
+    }
+
+    .basics {
+        gap: 2.8rem;
     }
 
     .profile__img {
