@@ -1,10 +1,11 @@
-<section class="basics section grid" id='basics'>
+<section class="basics container section grid" id='basics'>
     <%~ include('profile-picture', {
         picture: it.resume.basics.picture
     }) %>
     <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
         <header class="hide"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
     <% } %>
+    
     <div class="article-container">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.basics}) %>
         <%~ include('key-value-item', {
