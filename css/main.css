@@ -882,6 +882,12 @@ article {
         background-image: none;
     }
 
+    .area,
+    .area>* {
+        display: none;
+        user-select: none;
+    }
+
     .main-wrapper {
         grid-template-columns: none;
         max-width: none;
