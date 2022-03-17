@@ -89,6 +89,7 @@
 
 				<div class="right">
 					<!-- WORK -->
+					<div class="counter-reset"></div>
 					<%~ include("work", {
 						resume: it.resume
 					}) %>

@@ -379,6 +379,10 @@ article {
     -webkit-user-select: none;
 }
 
+.right {
+    order: -1;
+}
+
 .with-header-date-logo .article-header {
     display: flex;
     align-items: center;
@@ -1113,10 +1117,13 @@ article {
     }
 
     .cover-page .cover-page__contact {
-        font-size: var(--normal-font-size);
+        font-size: var(--smaller-font-size);
+        display: flex;
+        align-items: center;
+        column-gap: .7rem;
     }
 
-    .cover-page h1,
+    /* .cover-page h1,
     .cover-page h3,
     .cover-page p,
     .cover-page .article__list,
@@ -1127,7 +1134,7 @@ article {
     .cover-page__social .icon {
         -webkit-print-color-adjust: exact;
         color: black !important;
-    }
+    } */
 
     .cover-page__header {
         display: flex;
@@ -1136,32 +1143,24 @@ article {
         gap: 3mm;
     }
 
-    .cover-page .picture {
-        text-align: center;
-    }
-
-    .cover-page__header .picture img {
+    .cover-page__header .profile__img {
         width: 10cm;
         height: auto;
-        border-radius: 50%;
         display: block;
         margin: 1rem auto 0;
-    }
-
-    .cover-page__contact {
-        font-size: var(--small-font-size) !important;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: .7rem;
-        margin-top: 1rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
     }
 
     /* TRIED TO CREATE GAP BETWEEN ICONS AND TEXT */
-    :is(.article__mail, .article__phone, .article__url) .cover-page__contact {
+    .cover-page__contact>* {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        column-gap: .3rem;
+        column-gap: .5rem;
     }
 
     .cover-page__social {
