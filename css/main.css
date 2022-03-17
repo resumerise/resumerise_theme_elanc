@@ -379,10 +379,6 @@ article {
     -webkit-user-select: none;
 }
 
-.right {
-    order: -1;
-}
-
 .with-header-date-logo .article-header {
     display: flex;
     align-items: center;
@@ -890,6 +886,10 @@ article {
         max-width: none;
         margin: 0;
         gap: 0;
+    }
+
+    .right {
+        order: -1;
     }
 
     :is(.awards, .references, .publications) article,
