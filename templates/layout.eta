@@ -18,6 +18,24 @@
 		</style>
 	</head>
 	<body>
+<<<<<<< HEAD
+=======
+		<div class="area">
+			<ul class="circles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+>>>>>>> a16b7a5fd41a824066d0aaaa3d600126be27d4bc
 		<main class="main">
 			<% if (it.type === 'PRINT') { %>
 				<!-- cover Page -->
@@ -89,6 +107,7 @@
 
 				<div class="right">
 					<!-- WORK -->
+					<div class="counter-reset"></div>
 					<%~ include("work", {
 						resume: it.resume
 					}) %>
